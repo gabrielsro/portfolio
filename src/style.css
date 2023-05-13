@@ -1,0 +1,47 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+* p {
+  color: white;
+}
+
+body {
+  background-color: black;
+  height: 100vh;
+}
+
+.header-home,
+.footer-home {
+  background-color: white;
+}
+
+main {
+  display: grid;
+  place-content: center;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+@media only screen and (min-width: 831px) {
+  .footer-home nav {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .header-home {
+    display: grid;
+    place-content: center;
+  }
+  .header-home nav {
+    display: none;
+  }
+}
