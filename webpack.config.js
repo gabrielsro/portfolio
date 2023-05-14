@@ -14,11 +14,11 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(png|jpg|jpeg|webp|gif)$/,
-        type: "asset",
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
       },
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
