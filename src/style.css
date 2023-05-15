@@ -37,6 +37,10 @@ footer {
   gap: 50px;
 }
 
+.titleContainer h1:hover {
+  cursor: pointer;
+}
+
 .titleIcons {
   display: flex;
   gap: 10px;
