@@ -57,9 +57,9 @@ const environmentMap = cubeTextureLoader.load([px, nx, py, ny, pz, nz]);
  */
 //coordinates
 const coordinates = {
-  intro: { x: 0, y: 0, z: -1 },
-  about: { x: -14, y: 0, z: -1 },
-  projects: { x: 0, y: -7, z: 0 },
+  intro: { x: 0, y: 0, z: 0 },
+  about: { x: -14, y: 0, z: 0 },
+  projects: { x: 0, y: -14, z: 0 },
   contact: { x: 14, y: 0, z: 1 },
 };
 
@@ -116,7 +116,7 @@ const camera = new THREE.PerspectiveCamera(
   0.5,
   100
 );
-camera.position.z = 5;
+camera.position.z = 8;
 camera.position.y = 0;
 camera.position.x = 0;
 scene.add(camera);

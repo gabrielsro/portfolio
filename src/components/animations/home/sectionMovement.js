@@ -10,48 +10,48 @@ function sectionMovement(camera, coordinates, destination) {
     z: coordinates[destination].z,
     camera: camera,
     clock: new Clock(),
+    speed: 7.8,
+    //slope: (y - camera.position.y) / (x - camera.position.x),
   };
   function movement() {
     let id = window.requestAnimationFrame(movement);
+    const delta = obj.clock.getDelta();
     //x
+    if (camera.position.x == obj.x) {
+      obj.xReady = true;
+    }
     if (camera.position.x > obj.x && !obj.xReady) {
-      camera.position.x -= obj.clock.getDelta() * 3.8;
+      camera.position.x -= delta * obj.speed;
+      console.log(`subtracting to x: ${camera.position.x}`);
       if (camera.position.x <= obj.x) {
         obj.xReady = true;
       }
     }
     if (camera.position.x < obj.x && !obj.xReady) {
-      camera.position.x += obj.clock.getDelta() * 3.8;
+      camera.position.x += delta * obj.speed;
+      console.log(`adding to x: ${camera.position.x}`);
       if (camera.position.x >= obj.x) {
         obj.xReady = true;
       }
     }
-    if (camera.position.x == obj.x) {
-      obj.xReady = true;
-    }
 
     //y
+    if (camera.position.y == obj.y) {
+      obj.yReady = true;
+    }
     if (camera.position.y > obj.y && !obj.yReady) {
-      camera.position.y -= obj.clock.getDelta() * 3.8;
+      camera.position.y -= delta * obj.speed;
+      console.log(`subtracting to y: ${camera.position.y}`);
       if (camera.position.y <= obj.y) {
         obj.yReady = true;
       }
     }
     if (camera.position.y < obj.y && !obj.yReady) {
-      camera.position.y += obj.clock.getDelta() * 3.8;
+      camera.position.y += delta * obj.speed;
+      console.log(`adding to y: ${camera.position.y}`);
       if (camera.position.y >= obj.y) {
         obj.yReady = true;
       }
-    }
-    if (camera.position.y == obj.y) {
-      obj.yReady = true;
-    }
-
-    //z
-
-    if (obj.xReady && obj.yReady) {
-      window.cancelAnimationFrame(id);
-      obj.clock.stop();
     }
   }
   movement();
