@@ -58,9 +58,9 @@ const environmentMap = cubeTextureLoader.load([px, nx, py, ny, pz, nz]);
 //coordinates
 const coordinates = {
   intro: { x: 0, y: 0, z: 0 },
-  about: { x: -14, y: 0, z: 0 },
-  projects: { x: 0, y: -14, z: 0 },
-  contact: { x: 14, y: 0, z: 1 },
+  about: { x: -16, y: 0, z: 0 },
+  projects: { x: 0, y: -16, z: 0 },
+  contact: { x: 16, y: 0, z: 0 },
 };
 
 //cube
@@ -106,6 +106,11 @@ scene.add(torus);
 torus.position.y = coordinates.projects.y;
 torus.position.x = coordinates.projects.x;
 torus.position.z = coordinates.projects.z;
+
+coordinates.intro.shape = torusKnot;
+coordinates.about.shape = sphere;
+coordinates.projects.shape = torus;
+coordinates.contact.shape = cube;
 
 /**
  * Camera
@@ -156,25 +161,25 @@ const Animation = {
   canvas: canvasHome,
   intro() {
     if (page.location !== "intro") {
-      sectionMovement(camera, coordinates, "intro");
+      sectionMovement(camera, coordinates, "intro", page.location);
       page.location = "intro";
     }
   },
   about() {
     if (page.location !== "about") {
-      sectionMovement(camera, coordinates, "about");
+      sectionMovement(camera, coordinates, "about", page.location);
       page.location = "about";
     }
   },
   contact() {
     if (page.location !== "contact") {
-      sectionMovement(camera, coordinates, "contact");
+      sectionMovement(camera, coordinates, "contact", page.location);
       page.location = "contact";
     }
   },
   projects() {
     if (page.location !== "projects") {
-      sectionMovement(camera, coordinates, "projects");
+      sectionMovement(camera, coordinates, "projects", page.location);
       page.location = "projects";
     }
   },
