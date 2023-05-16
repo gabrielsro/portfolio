@@ -18,3 +18,9 @@
   grid-template-columns: auto 1fr;
   gap: 10px;
 }
+
+.iconsContainer {
+  display: grid;
+  place-content: center;
+  padding-left: 5px;
+}

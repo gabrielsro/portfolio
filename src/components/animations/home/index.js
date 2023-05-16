@@ -113,24 +113,25 @@ scene.add(cfst);
 
 //cube
 const cube = new THREE.Mesh(
-  new THREE.BoxGeometry(1, 1, 1),
-  new THREE.MeshBasicMaterial({ color: 0x00ff00, wireframe: true })
+  new THREE.BoxGeometry(2, 2, 2),
+  new THREE.MeshBasicMaterial({ color: "red", wireframe: true })
 );
 scene.add(cube);
-cube.position.x = coordinates.contact.x;
-cube.position.z = coordinates.contact.z;
+cube.position.x = coordinates.about.x;
+cube.position.z = coordinates.about.z;
 
 //Sphere
 const sphereMaterial = new THREE.MeshBasicMaterial({
-  color: "red",
+  color: "blue",
   wireframe: true,
 });
-const sphereGeometry = new THREE.SphereGeometry();
+const sphereGeometry = new THREE.SphereGeometry(2);
 const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
 scene.add(sphere);
-sphere.position.x = coordinates.about.x;
-sphere.position.z = coordinates.about.z;
-sphere.position.y = coordinates.about.y;
+sphere.position.x = coordinates.contact.x;
+sphere.position.z = coordinates.contact.z;
+sphere.position.y = coordinates.contact.y;
+sphere.rotateY = Math.PI / 6;
 
 //TorusKnot
 const torusKnotMaterial = new THREE.MeshStandardMaterial();
@@ -156,9 +157,9 @@ torus.position.x = coordinates.projects.x;
 torus.position.z = coordinates.projects.z;
 
 coordinates.intro.shape = torusKnot;
-coordinates.about.shape = sphere;
+coordinates.about.shape = cube;
 coordinates.projects.shape = torus;
-coordinates.contact.shape = cube;
+coordinates.contact.shape = sphere;
 
 /**
  * Camera
@@ -196,6 +197,7 @@ const clock = new THREE.Clock();
 function newFrame() {
   window.requestAnimationFrame(newFrame);
   cube.rotation.y = clock.getElapsedTime();
+  sphere.rotation.y = clock.getElapsedTime() * 0.3;
   torusKnot.rotation.y = clock.getElapsedTime();
   torus.rotation.y = clock.getElapsedTime();
   wapp.rotation.y = clock.getElapsedTime();

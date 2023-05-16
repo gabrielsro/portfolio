@@ -27,6 +27,7 @@ let contactPage = {
     emailIconLigth.src = EmailDark;
     emailIconLigth.alt = "Email icon";
     let emailIcons = document.createElement("div");
+    emailIcons.classList.add("iconsContainer");
     emailIcons.appendChild(emailIcon);
     emailIcons.appendChild(emailIconLigth);
     let phone = document.createElement("h2");
@@ -42,6 +43,7 @@ let contactPage = {
     phoneIconLight.src = PhoneDark;
     phoneIconLight.alt = "Phone icon";
     let phoneIcons = document.createElement("div");
+    phoneIcons.classList.add("iconsContainer");
     phoneIcons.appendChild(phoneIcon);
     phoneIcons.appendChild(phoneIconLight);
     let address = document.createElement("h2");
@@ -57,6 +59,7 @@ let contactPage = {
     addressIconLight.src = AddressDark;
     addressIconLight.alt = "Address icon";
     let addressIcons = document.createElement("div");
+    addressIcons.classList.add("iconsContainer");
     addressIcons.appendChild(addressIcon);
     addressIcons.appendChild(addressIconLight);
     main.appendChild(titleContainer);

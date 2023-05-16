@@ -1,4 +1,13 @@
 import "./aboutPageStyle.css";
+import Js from "./icons/js.svg";
+import Node from "./icons/node.svg";
+import Mongo from "./icons/mongo.svg";
+import Php from "./icons/php.svg";
+import Mysql from "./icons/mysql.svg";
+import Html from "./icons/html.svg";
+import Css from "./icons/css.svg";
+import React from "./icons/react.svg";
+
 const main = document.querySelector("main");
 
 let aboutPage = {
@@ -7,8 +16,54 @@ let aboutPage = {
     let title = document.createElement("h1");
     title.innerText = "About";
     titleContainer.appendChild(title);
+    let infoContainer = document.createElement("div");
+    infoContainer.innerText = `My projects are a result of me blending  my interest in Statistics, Probability and Software Development so I can better serve the increasing need for data accessibility, visualization, and understanding.`;
+    let toolsContainer = document.createElement("div");
+    let toolsTitle = document.createElement("h3");
+    toolsTitle.innerText = "Some of the languages I speak:";
+    let tools = document.createElement("div");
+    let jsCard = cardMaker(Js, "JavaScript");
+    tools.appendChild(jsCard);
+    let nodeCard = cardMaker(Node, "Node.js");
+    tools.appendChild(nodeCard);
+    let mongoCard = cardMaker(Mongo, "MongoDB");
+    tools.appendChild(mongoCard);
+    let phpCard = cardMaker(Php, "PHP");
+    tools.appendChild(phpCard);
+    let mysqlCard = cardMaker(Mysql, "MySQL");
+    tools.appendChild(mysqlCard);
+    let htmlCard = cardMaker(Html, "HTML");
+    tools.appendChild(htmlCard);
+    let cssCard = cardMaker(Css, "CSS");
+    tools.appendChild(cssCard);
+    let reactCard = cardMaker(React, "React");
+    tools.appendChild(reactCard);
+    toolsContainer.appendChild(toolsTitle);
     main.appendChild(titleContainer);
+    main.appendChild(infoContainer);
+    main.appendChild(toolsContainer);
+    main.appendChild(tools);
   },
 };
+
+function cardMaker(img, txt) {
+  let card = document.createElement("div");
+  card.classList.add("languageCard");
+  // Image:
+  let imgContainer = document.createElement("div");
+  let icon = new Image();
+  icon.src = img;
+  icon.alt = `${txt} icon`;
+  imgContainer.appendChild(icon);
+  // Text:
+  let txtContainer = document.createElement("div");
+  let text = document.createElement("h4");
+  text.innerText = txt;
+  txtContainer.appendChild(text);
+  // Assemble Image and Text
+  card.appendChild(imgContainer);
+  card.appendChild(txtContainer);
+  return card;
+}
 
 export { aboutPage };

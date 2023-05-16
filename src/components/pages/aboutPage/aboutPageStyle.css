@@ -1,0 +1,9 @@
+.languageCard {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.languageCard img {
+  width: 20px;
+}
