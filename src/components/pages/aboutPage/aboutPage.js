@@ -7,6 +7,7 @@ import Mysql from "./icons/mysql.svg";
 import Html from "./icons/html.svg";
 import Css from "./icons/css.svg";
 import React from "./icons/react.svg";
+import Git from "./icons/git.svg";
 
 const main = document.querySelector("main");
 
@@ -38,6 +39,8 @@ let aboutPage = {
     tools.appendChild(cssCard);
     let reactCard = cardMaker(React, "React");
     tools.appendChild(reactCard);
+    let gitCard = cardMaker(Git, "Git");
+    tools.appendChild(gitCard);
     toolsContainer.appendChild(toolsTitle);
     main.appendChild(titleContainer);
     main.appendChild(infoContainer);
