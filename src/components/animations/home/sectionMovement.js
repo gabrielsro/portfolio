@@ -1,6 +1,6 @@
 import { Clock } from "three";
 
-function sectionMovement(camera, coordinates, destination, origin) {
+function sectionMovement(camera, coordinates, destination, origin, page) {
   const obj = {
     xReady: false,
     yReady: false,
@@ -95,6 +95,9 @@ function sectionMovement(camera, coordinates, destination, origin) {
         if (camera.position.y < 0) {
           camera.position.y = Math.ceil(camera.position.y);
         }
+        if (page) {
+          page.generateContent();
+        }
       }
     }
     /**
@@ -108,6 +111,7 @@ function sectionMovement(camera, coordinates, destination, origin) {
           coordinates[`${origin}`].x = obj.shapePull.position.x;
           coordinates[`${destination}`].x = obj.shapePush.position.x;
           window.cancelAnimationFrame(id);
+          page.generateContent();
         }
         obj.shapePull.position.x =
           Math.cos(elapsedTime * Math.PI) * obj.diameter;
@@ -124,6 +128,7 @@ function sectionMovement(camera, coordinates, destination, origin) {
           coordinates[`${origin}`].x = obj.shapePull.position.x;
           coordinates[`${destination}`].x = obj.shapePush.position.x;
           window.cancelAnimationFrame(id);
+          page.generateContent();
         }
         obj.shapePull.position.x =
           Math.cos(Math.PI * (elapsedTime - 1)) * obj.diameter;
