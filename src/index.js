@@ -18,6 +18,7 @@ function renderHome() {
   darkIconDark.src = DarkIconDark;
   darkIconDark.alt = "Dark mode icon";
   darkIconDark.classList.add("invisible");
+  darkIconDark.setAttribute("id", "moon");
   let lightIconDark = new Image();
   lightIconDark.src = LightIconDark;
   lightIconDark.alt = "Light mode icon";
@@ -43,12 +44,36 @@ function renderHome() {
     body.classList.add("lightMode");
     darkIconDark.classList.remove("invisible");
     lightIconDark.classList.add("invisible");
+    let darkIcons = document.querySelectorAll(".forDark");
+    darkIcons.forEach((i) => {
+      if (!i.classList.contains("invisible")) {
+        i.classList.add("invisible");
+      }
+    });
+    let lightIcons = document.querySelectorAll(".forLight");
+    lightIcons.forEach((i) => {
+      if (i.classList.contains("invisible")) {
+        i.classList.remove("invisible");
+      }
+    });
   });
   darkIconDark.addEventListener("click", () => {
     body.classList.add("darkMode");
     body.classList.remove("lightMode");
     darkIconDark.classList.add("invisible");
     lightIconDark.classList.remove("invisible");
+    let lightIcons = document.querySelectorAll(".forLight");
+    lightIcons.forEach((i) => {
+      if (!i.classList.contains("invisible")) {
+        i.classList.add("invisible");
+      }
+    });
+    let darkIcons = document.querySelectorAll(".forDark");
+    darkIcons.forEach((i) => {
+      if (i.classList.contains("invisible")) {
+        i.classList.remove("invisible");
+      }
+    });
   });
 
   footer.classList.add("footer-home");

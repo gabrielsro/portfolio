@@ -1,0 +1,20 @@
+#emailIcon,
+#emailIconLight {
+  width: 20px;
+}
+
+#phoneIcon,
+#phoneIconLight {
+  width: 25px;
+}
+
+#addressIcon,
+#addressIconLight {
+  width: 30px;
+}
+
+.infoContainer {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+}
