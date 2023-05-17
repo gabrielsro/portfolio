@@ -47,7 +47,9 @@ const projectsPage = {
     const siteSrcCodeLink = document.createElement("p");
     siteSrcCodeLink.innerText = `Website's source code`;
     siteSrcCode.appendChild(siteSrcCodeLink);
-    siteSrcCode.addEventListener("click", () => {});
+    siteSrcCode.addEventListener("click", () => {
+      window.location.href = "https://github.com/gabrielsro/portfolio";
+    });
     //Pack everything:
     projectsContainer.appendChild(title);
     projectsContainer.appendChild(project1);
