@@ -6,18 +6,34 @@
   cursor: pointer;
 }
 
+.siteSrcCodeContainer:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
 @media only screen and (min-width: 831px) {
   .projectWindow {
     padding-top: 0.5vh;
     padding-bottom: 1vh;
   }
+
+  .siteSrcCodeContainer {
+    position: absolute;
+    bottom: 1vh;
+  }
 }
 
 @media only screen and (max-width: 830px) {
-  .pageContainer h1 {
+  #pageContainerProjects h1 {
     margin-bottom: 2vh;
   }
-  .pageContainer h2 {
+  #pageContainerProjects h2 {
     font-size: 1.7rem;
+  }
+  .siteSrcCodeContainer {
+    margin-top: 2vh;
+  }
+  #pageContainerProjects h1 {
+    padding-top: 8vh;
   }
 }

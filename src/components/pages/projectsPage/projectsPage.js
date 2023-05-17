@@ -39,11 +39,21 @@ const projectsPage = {
     project1Title.addEventListener("click", (e) => handleProjectClick(e));
     project2Title.addEventListener("click", (e) => handleProjectClick(e));
     project3Title.addEventListener("click", (e) => handleProjectClick(e));
+    /**
+     * Site's source code
+     */
+    const siteSrcCode = document.createElement("div");
+    siteSrcCode.classList.add("siteSrcCodeContainer");
+    const siteSrcCodeLink = document.createElement("p");
+    siteSrcCodeLink.innerText = `Website's source code`;
+    siteSrcCode.appendChild(siteSrcCodeLink);
+    siteSrcCode.addEventListener("click", () => {});
     //Pack everything:
     projectsContainer.appendChild(title);
     projectsContainer.appendChild(project1);
     projectsContainer.appendChild(project2);
     projectsContainer.appendChild(project3);
+    projectsContainer.appendChild(siteSrcCode);
     main.appendChild(projectsContainer);
   },
   animate(wapp, edp, cfst, pCoord) {
