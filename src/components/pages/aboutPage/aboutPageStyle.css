@@ -34,4 +34,7 @@
   #aboutSubtitle {
     margin-bottom: 1vh;
   }
+  .languageCard img {
+    width: 40px;
+  }
 }
