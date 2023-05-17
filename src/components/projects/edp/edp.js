@@ -22,6 +22,7 @@ const Edp = {
     gitHubIcon.alt = "GitHub icon";
     gitHubIcon.classList.add("projectGHIcon");
     let githubLink = document.createElement("a");
+    githubLink.classList.add("ghLink");
     githubLink.innerText = "asasasass";
     //Site Link
     let linkIcon = new Image();

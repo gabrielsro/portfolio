@@ -11,6 +11,19 @@ body {
   height: 100vh;
 }
 
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:link {
+  color: #6495ed;
+}
+
+a:visited {
+  color: #6495ed;
+}
+
 .lightMode {
   background-color: white;
   color: black;
@@ -112,7 +125,7 @@ footer {
   }
 
   h1 {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     white-space: nowrap;
   }
   h2 {
