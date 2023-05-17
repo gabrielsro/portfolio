@@ -13,7 +13,25 @@
     margin-top: 2vh;
     margin-bottom: 1.3vh;
   }
+  #aboutSubtitle {
+    font-size: 1.4rem;
+  }
   .languageCard img {
     width: 40px;
+  }
+  #aboutInfoTxt {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  #aboutPageContainer h1 {
+    margin-bottom: 2vh;
+  }
+  #aboutInfoTxt {
+    margin-bottom: 2vh;
+  }
+  #aboutSubtitle {
+    margin-bottom: 1vh;
   }
 }

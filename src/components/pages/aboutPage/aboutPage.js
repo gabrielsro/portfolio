@@ -18,6 +18,7 @@ let aboutPage = {
     title.innerText = "About";
     titleContainer.appendChild(title);
     let infoContainer = document.createElement("div");
+    infoContainer.setAttribute("id", "aboutInfoTxt");
     infoContainer.innerText = `My projects are a result of me blending  my interest in Statistics, Probability and Software Development so I can better serve the increasing need for data accessibility, visualization, and understanding.`;
     let toolsContainer = document.createElement("div");
     let toolsTitle = document.createElement("h3");
@@ -46,6 +47,7 @@ let aboutPage = {
     toolsContainer.appendChild(toolsTitle);
     let pageContainer = document.createElement("div");
     pageContainer.classList.add("pageContainer");
+    pageContainer.setAttribute("id", "aboutPageContainer");
     pageContainer.appendChild(titleContainer);
     pageContainer.appendChild(infoContainer);
     pageContainer.appendChild(toolsContainer);
