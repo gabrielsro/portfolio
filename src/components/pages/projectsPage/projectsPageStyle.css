@@ -12,3 +12,12 @@
     padding-bottom: 1vh;
   }
 }
+
+@media only screen and (max-width: 830px) {
+  .pageContainer h1 {
+    margin-bottom: 2vh;
+  }
+  .pageContainer h2 {
+    font-size: 1.7rem;
+  }
+}
