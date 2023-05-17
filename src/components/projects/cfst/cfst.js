@@ -22,15 +22,15 @@ const Cfst = {
     gitHubIcon.alt = "GitHub icon";
     gitHubIcon.classList.add("projectGHIcon");
     let githubLink = document.createElement("a");
-    githubLink.innerText = "asasasass";
+    githubLink.innerText = "github.com/gabrielsro/cars-app";
+    githubLink.setAttribute("href", "https://github.com/gabrielsro/cars-app");
     //Site Link
     let linkIcon = new Image();
     linkIcon.src = LinkIcon;
     linkIcon.alt = "Link icon";
     linkIcon.classList.add("projectLinkIcon");
     let link = document.createElement("a");
-    link.innerText = "testklnsfdnkaskldfnaklsd";
-    link.setAttribute("href", "");
+    link.innerText = "pending";
 
     //Pack it all up:
     contentLinks.appendChild(linkIcon);

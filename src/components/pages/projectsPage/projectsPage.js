@@ -47,7 +47,7 @@ const projectsPage = {
     const siteSrcCodeLink = document.createElement("p");
     siteSrcCodeLink.innerText = `Website's source code`;
     siteSrcCode.appendChild(siteSrcCodeLink);
-    siteSrcCode.addEventListener("click", () => {
+    siteSrcCodeLink.addEventListener("click", () => {
       window.location.href = "https://github.com/gabrielsro/portfolio";
     });
     //Pack everything:
