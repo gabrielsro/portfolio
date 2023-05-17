@@ -30,6 +30,12 @@
   place-content: center;
 }
 
+@media only screen and (max-width: 830px) {
+  #pageContainerContact h2 {
+    font-size: 1.5rem;
+  }
+}
+
 @media only screen and (min-width: 831px) {
   #emailIcon,
   #emailIconLight {

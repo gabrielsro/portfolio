@@ -3,6 +3,7 @@ import { Navbar } from "./components/navbar";
 import { Animation } from "./components/animations/home";
 import DarkIconDark from "./images/iconsDark/dark2dark.svg";
 import LightIconDark from "./images/iconsLight/light1dark.svg";
+import { introPage } from "./components/pages/introPage/introPage";
 
 const body = document.querySelector("body");
 body.classList.add("darkMode");
@@ -81,3 +82,4 @@ function renderHome() {
 }
 
 renderHome();
+introPage.generateContent();
