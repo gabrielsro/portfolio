@@ -42,10 +42,13 @@ let aboutPage = {
     let gitCard = cardMaker(Git, "Git");
     tools.appendChild(gitCard);
     toolsContainer.appendChild(toolsTitle);
-    main.appendChild(titleContainer);
-    main.appendChild(infoContainer);
-    main.appendChild(toolsContainer);
-    main.appendChild(tools);
+    let pageContainer = document.createElement("div");
+    pageContainer.classList.add("pageContainer");
+    pageContainer.appendChild(titleContainer);
+    pageContainer.appendChild(infoContainer);
+    pageContainer.appendChild(toolsContainer);
+    pageContainer.appendChild(tools);
+    main.appendChild(pageContainer);
   },
 };
 

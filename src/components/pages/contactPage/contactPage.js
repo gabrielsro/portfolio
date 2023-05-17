@@ -62,7 +62,6 @@ let contactPage = {
     addressIcons.classList.add("iconsContainer");
     addressIcons.appendChild(addressIcon);
     addressIcons.appendChild(addressIconLight);
-    main.appendChild(titleContainer);
     infoContainer.classList.add("infoContainer");
     infoContainer.appendChild(emailIcons);
     infoContainer.appendChild(email);
@@ -80,7 +79,11 @@ let contactPage = {
       phoneIcon.classList.add("invisible");
       addressIcon.classList.add("invisible");
     }
-    main.appendChild(infoContainer);
+    let pageContainer = document.createElement("div");
+    pageContainer.classList.add("pageContainer");
+    pageContainer.appendChild(titleContainer);
+    pageContainer.appendChild(infoContainer);
+    main.appendChild(pageContainer);
   },
 };
 

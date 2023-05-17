@@ -4,10 +4,10 @@ import { Animation } from "./components/animations/home";
 import DarkIconDark from "./images/iconsDark/dark2dark.svg";
 import LightIconDark from "./images/iconsLight/light1dark.svg";
 
-let body = document.querySelector("body");
+const body = document.querySelector("body");
 body.classList.add("darkMode");
-let header = document.querySelector("header");
-let footer = document.querySelector("footer");
+const header = document.querySelector("header");
+const footer = document.querySelector("footer");
 
 function renderHome() {
   header.classList.add("header-home");
