@@ -1,5 +1,6 @@
 import "./projectsPageStyle.css";
 import { Clock } from "three";
+import { Edp } from "../../projects/edp/edp";
 const main = document.querySelector("main");
 const projectsPage = {
   generateContent() {
@@ -8,8 +9,11 @@ const projectsPage = {
     title.innerText = "Projects";
     titleContainer.appendChild(title);
     let projectsContainer = document.createElement("div");
-    let project1 = document.createElement("h2");
-    project1.innerText = "esdepolitologos.com";
+    let project1Title = document.createElement("h2");
+    project1Title.innerText = "esdepolitologos.com";
+    let project1 = document.createElement("div");
+    project1.appendChild(project1Title);
+    project1.appendChild(Edp.generateContent());
     let project2 = document.createElement("h2");
     project2.innerText = "Carfast App";
     let project3 = document.createElement("h2");
