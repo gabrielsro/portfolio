@@ -1,5 +1,14 @@
+#pageContainerProjects {
+  display: flex;
+  flex-direction: column;
+}
+
 .projectContainer {
-  text-align: justify;
+  display: inline-block;
+}
+
+.projectContainer h2 {
+  display: inline;
 }
 
 .projectContainer h2:hover {
