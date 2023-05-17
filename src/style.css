@@ -59,6 +59,11 @@ footer {
   cursor: pointer;
 }
 
+.pageContainer {
+  width: 100vw;
+  padding-left: 3vw;
+}
+
 @media only screen and (min-width: 831px) {
   .footer-home nav {
     display: none;

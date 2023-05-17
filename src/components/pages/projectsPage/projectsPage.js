@@ -12,6 +12,7 @@ const projectsPage = {
     title.innerText = "Projects";
     titleContainer.appendChild(title);
     let projectsContainer = document.createElement("div");
+    projectsContainer.classList.add("pageContainer");
     //Project 1:
     let project1Title = document.createElement("h2");
     project1Title.innerText = "esdepolitologos.com";
@@ -37,12 +38,11 @@ const projectsPage = {
     project1Title.addEventListener("click", (e) => handleProjectClick(e));
     project2Title.addEventListener("click", (e) => handleProjectClick(e));
     project3Title.addEventListener("click", (e) => handleProjectClick(e));
-
     //Pack everything:
+    projectsContainer.appendChild(title);
     projectsContainer.appendChild(project1);
     projectsContainer.appendChild(project2);
     projectsContainer.appendChild(project3);
-    main.appendChild(titleContainer);
     main.appendChild(projectsContainer);
   },
   animate(wapp, edp, cfst, pCoord) {
