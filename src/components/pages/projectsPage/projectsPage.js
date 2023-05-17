@@ -1,6 +1,8 @@
 import "./projectsPageStyle.css";
 import { Clock } from "three";
 import { Edp } from "../../projects/edp/edp";
+import { Cfst } from "../../projects/cfst/cfst";
+import { Wapp } from "../../projects/wapp/wapp";
 const main = document.querySelector("main");
 const projectsPage = {
   generateContent() {
@@ -12,12 +14,21 @@ const projectsPage = {
     let project1Title = document.createElement("h2");
     project1Title.innerText = "esdepolitologos.com";
     let project1 = document.createElement("div");
+    project1.classList.add("projectContainer");
     project1.appendChild(project1Title);
     project1.appendChild(Edp.generateContent());
-    let project2 = document.createElement("h2");
-    project2.innerText = "Carfast App";
-    let project3 = document.createElement("h2");
-    project3.innerText = "Weather App";
+    let project2Title = document.createElement("h2");
+    project2Title.innerText = "CarFast";
+    let project2 = document.createElement("div");
+    project2.classList.add("projectContainer");
+    project2.appendChild(project2Title);
+    project2.appendChild(Cfst.generateContent());
+    let project3Title = document.createElement("h2");
+    project3Title.innerText = "Weather App";
+    let project3 = document.createElement("div");
+    project3.classList.add("projectContainer");
+    project3.appendChild(project3Title);
+    project3.appendChild(Wapp.generateContent());
     projectsContainer.appendChild(project1);
     projectsContainer.appendChild(project2);
     projectsContainer.appendChild(project3);
