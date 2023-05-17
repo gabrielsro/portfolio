@@ -13,7 +13,7 @@ function renderHome() {
   header.classList.add("header-home");
   let titleContainer = document.createElement("div");
   titleContainer.classList.add("titleContainer");
-  let title = document.createElement("h1");
+  let title = document.createElement("p");
   let darkIconDark = new Image();
   darkIconDark.src = DarkIconDark;
   darkIconDark.alt = "Dark mode icon";

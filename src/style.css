@@ -37,6 +37,11 @@ footer {
   gap: 50px;
 }
 
+.titleContainer p {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
 .titleContainer h1:hover {
   cursor: pointer;
 }
