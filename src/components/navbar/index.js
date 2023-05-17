@@ -17,8 +17,8 @@ const Navbar = () => {
   contact.addEventListener("click", () => Animation.contact());
   let navbarContents = document.createElement("div");
   navbarContents.appendChild(home);
-  navbarContents.appendChild(about);
   navbarContents.appendChild(projects);
+  navbarContents.appendChild(about);
   navbarContents.appendChild(contact);
   navbar.appendChild(navbarContents);
   return navbar;

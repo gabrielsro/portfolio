@@ -2,9 +2,12 @@ import "./contactPageStyle.css";
 import EmailLight from "./icons/email1light.svg";
 import PhoneLight from "./icons/phone1light.svg";
 import AddressLight from "./icons/address1light.svg";
+import GitHubLight from "./icons/gh2light.svg";
 import EmailDark from "./icons/email1dark.svg";
 import PhoneDark from "./icons/phone1dark.svg";
 import AddressDark from "./icons/address1dark.svg";
+import GitHubDark from "./icons/gh2dark.svg";
+
 const main = document.querySelector("main");
 let contactPage = {
   generateContent() {
@@ -62,6 +65,22 @@ let contactPage = {
     addressIcons.classList.add("iconsContainer");
     addressIcons.appendChild(addressIcon);
     addressIcons.appendChild(addressIconLight);
+    let gitHub = document.createElement("h2");
+    gitHub.innerText = "github.com/gabrielsro";
+    let gitHubIcon = new Image();
+    gitHubIcon.setAttribute("id", "gitHubIcon");
+    gitHubIcon.classList.add("forDark");
+    gitHubIcon.src = GitHubLight;
+    gitHubIcon.alt = "GitHub icon";
+    let gitHubIconLight = new Image();
+    gitHubIconLight.setAttribute("id", "gitHubIconLight");
+    gitHubIconLight.classList.add("forLight");
+    gitHubIconLight.src = GitHubDark;
+    gitHubIconLight.alt = "GitHub icon";
+    let gitHubIcons = document.createElement("div");
+    gitHubIcons.classList.add("iconsContainer");
+    gitHubIcons.appendChild(gitHubIcon);
+    gitHubIcons.appendChild(gitHubIconLight);
     infoContainer.classList.add("infoContainer");
     infoContainer.appendChild(emailIcons);
     infoContainer.appendChild(email);
@@ -69,18 +88,23 @@ let contactPage = {
     infoContainer.appendChild(phone);
     infoContainer.appendChild(addressIcons);
     infoContainer.appendChild(address);
+    infoContainer.appendChild(gitHubIcons);
+    infoContainer.appendChild(gitHub);
     if (moon.classList.contains("invisible")) {
       emailIconLigth.classList.add("invisible");
       phoneIconLight.classList.add("invisible");
       addressIconLight.classList.add("invisible");
+      gitHubIconLight.classList.add("invisible");
     }
     if (!moon.classList.contains("invisible")) {
       emailIcon.classList.add("invisible");
       phoneIcon.classList.add("invisible");
       addressIcon.classList.add("invisible");
+      gitHubIcon.classList.add("invisible");
     }
     let pageContainer = document.createElement("div");
     pageContainer.classList.add("pageContainer");
+    pageContainer.setAttribute("id", "pageContainerContact");
     pageContainer.appendChild(titleContainer);
     pageContainer.appendChild(infoContainer);
     main.appendChild(pageContainer);

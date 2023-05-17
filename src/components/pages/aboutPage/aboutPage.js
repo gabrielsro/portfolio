@@ -1,5 +1,5 @@
 import "./aboutPageStyle.css";
-import Js from "./icons/js.svg";
+import Js from "./icons/js3.svg";
 import Node from "./icons/node.svg";
 import Mongo from "./icons/mongo.svg";
 import Php from "./icons/php.svg";
@@ -21,8 +21,10 @@ let aboutPage = {
     infoContainer.innerText = `My projects are a result of me blending  my interest in Statistics, Probability and Software Development so I can better serve the increasing need for data accessibility, visualization, and understanding.`;
     let toolsContainer = document.createElement("div");
     let toolsTitle = document.createElement("h3");
+    toolsTitle.setAttribute("id", "aboutSubtitle");
     toolsTitle.innerText = "Some of the languages I speak:";
     let tools = document.createElement("div");
+    tools.classList.add("tools");
     let jsCard = cardMaker(Js, "JavaScript");
     tools.appendChild(jsCard);
     let nodeCard = cardMaker(Node, "Node.js");

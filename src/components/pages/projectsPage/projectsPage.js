@@ -13,6 +13,7 @@ const projectsPage = {
     titleContainer.appendChild(title);
     let projectsContainer = document.createElement("div");
     projectsContainer.classList.add("pageContainer");
+    projectsContainer.setAttribute("id", "pageContainerProjects");
     //Project 1:
     let project1Title = document.createElement("h2");
     project1Title.innerText = "esdepolitologos.com";

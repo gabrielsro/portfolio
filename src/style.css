@@ -79,6 +79,17 @@ footer {
   }
   .titleContainer {
     display: flex;
+    padding-left: 1vw;
+    padding-top: 1vh;
+    font-size: 1.7rem;
+  }
+
+  .pageContainer {
+    padding-top: 4vh;
+  }
+
+  h1 {
+    margin-bottom: 1vh;
   }
 }
 

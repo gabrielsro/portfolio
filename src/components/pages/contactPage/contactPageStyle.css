@@ -1,25 +1,61 @@
 #emailIcon,
 #emailIconLight {
-  width: 20px;
+  width: 35px;
 }
 
 #phoneIcon,
 #phoneIconLight {
-  width: 25px;
+  width: 45px;
 }
 
 #addressIcon,
 #addressIconLight {
-  width: 30px;
+  width: 44px;
+}
+
+#gitHubIcon,
+#gitHubIconLight {
+  width: 46px;
 }
 
 .infoContainer {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 10px;
+  align-items: center;
 }
 
 .iconsContainer {
   display: grid;
   place-content: center;
+}
+
+@media only screen and (min-width: 831px) {
+  #emailIcon,
+  #emailIconLight {
+    width: 38px;
+  }
+
+  #phoneIcon,
+  #phoneIconLight {
+    width: 45px;
+  }
+
+  #addressIcon,
+  #addressIconLight {
+    width: 44px;
+  }
+
+  #gitHubIcon,
+  #gitHubIconLight {
+    width: 46px;
+  }
+
+  #pageContainerContact h1 {
+    margin-bottom: 5vh;
+  }
+  .infoContainer {
+    padding-left: 2vw;
+    grid-template-rows: 46px 46px 46px 46px;
+  }
 }

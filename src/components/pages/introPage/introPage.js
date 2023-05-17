@@ -6,9 +6,9 @@ const introPage = {
     introContainer.classList.add("pageContainer");
     introContainer.setAttribute("id", "introContainer");
 
-    let phrase1 = document.createElement("span");
-    let phrase2 = document.createElement("span");
-    let phrase3 = document.createElement("span");
+    let phrase1 = document.createElement("p");
+    let phrase2 = document.createElement("p");
+    let phrase3 = document.createElement("p");
     phrase1.innerText = `My name is Gabriel and you've found my portfolio.`;
     phrase2.innerText = `I'm an engineer focused on developing performant, accessible and secure web applications.`;
     phrase3.innerText = `In this website you can find some of my projects and try for yourself if the previous statement holds true or not!`;

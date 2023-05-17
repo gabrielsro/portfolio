@@ -5,5 +5,15 @@
 }
 
 .languageCard img {
-  width: 20px;
+  width: 30px;
+}
+
+@media only screen and (min-width: 831px) {
+  #aboutSubtitle {
+    margin-top: 2vh;
+    margin-bottom: 1.3vh;
+  }
+  .languageCard img {
+    width: 40px;
+  }
 }
