@@ -6,29 +6,39 @@ import { Wapp } from "../../projects/wapp/wapp";
 const main = document.querySelector("main");
 const projectsPage = {
   generateContent() {
+    //Projects page title:
     let titleContainer = document.createElement("div");
     let title = document.createElement("h1");
     title.innerText = "Projects";
     titleContainer.appendChild(title);
     let projectsContainer = document.createElement("div");
+    //Project 1:
     let project1Title = document.createElement("h2");
     project1Title.innerText = "esdepolitologos.com";
     let project1 = document.createElement("div");
     project1.classList.add("projectContainer");
     project1.appendChild(project1Title);
     project1.appendChild(Edp.generateContent());
+    //Project 2:
     let project2Title = document.createElement("h2");
     project2Title.innerText = "CarFast";
     let project2 = document.createElement("div");
     project2.classList.add("projectContainer");
     project2.appendChild(project2Title);
     project2.appendChild(Cfst.generateContent());
+    //Project 3:
     let project3Title = document.createElement("h2");
     project3Title.innerText = "Weather App";
     let project3 = document.createElement("div");
     project3.classList.add("projectContainer");
     project3.appendChild(project3Title);
     project3.appendChild(Wapp.generateContent());
+    //setup event listeners for each project
+    project1Title.addEventListener("click", (e) => handleProjectClick(e));
+    project2Title.addEventListener("click", (e) => handleProjectClick(e));
+    project3Title.addEventListener("click", (e) => handleProjectClick(e));
+
+    //Pack everything:
     projectsContainer.appendChild(project1);
     projectsContainer.appendChild(project2);
     projectsContainer.appendChild(project3);
@@ -39,6 +49,19 @@ const projectsPage = {
     projectsAnimations(wapp, edp, cfst, pCoord);
   },
 };
+
+function handleProjectClick(e) {
+  const projectWindows = document.querySelectorAll(".projectWindow");
+  const formattedName = e.target.innerText.split(" ").join("_");
+  projectWindows.forEach((p) => {
+    if (p.getAttribute("id") == formattedName) {
+      p.classList.toggle("invisible");
+    }
+    if (p.getAttribute("id") !== formattedName) {
+      p.classList.add("invisible");
+    }
+  });
+}
 
 function projectsAnimations(wapp, edp, cfst, pCoord) {
   let coordinates = pCoord;
