@@ -23,7 +23,11 @@ const Edp = {
     gitHubIcon.classList.add("projectGHIcon");
     let githubLink = document.createElement("a");
     githubLink.classList.add("ghLink");
-    githubLink.innerText = "asasasass";
+    githubLink.innerText = "github.com/gabrielsro/bibliotecaEDP";
+    githubLink.setAttribute(
+      "href",
+      "https://github.com/gabrielsro/bibliotecaEDP"
+    );
     //Site Link
     let linkIcon = new Image();
     linkIcon.src = LinkIcon;
