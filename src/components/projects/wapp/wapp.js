@@ -9,7 +9,7 @@ const Wapp = {
     contentContainer.classList.add("invisible");
     contentContainer.setAttribute("id", "Weather_App");
     let contentTxt = document.createElement("p");
-    contentTxt.innerText = `WeatherApp is a classic weather application that displays several weather data for different cities around the world. It was built as a SPA using pure vanilla JavaScript, which means that it's completely client-side rendered and has a very fast UI. Users can save a list of favorite cities for ease of access, save a preferred system of measurement and see different metrics, among other features.`;
+    contentTxt.innerText = `WeatherApp is a classic weather application that displays several weather pieces of data for different cities around the world. It was built as a SPA using pure vanilla JavaScript, which means that it's completely client-side rendered and has a very fast UI. Users can save a list of favorite cities for ease of access, save a preferred system of measurement and see different metrics, among other features.`;
     contentContainer.appendChild(contentTxt);
     /**
      * Links:
